@@ -1,7 +1,7 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [MainWindow.xaml](./CS/HowToApplyConditionalStyles/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/HowToApplyConditionalStyles/MainWindow.xaml.vb))
+* [MainWindow.xaml](./CS/HowToApplyConditionalStyles/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/HowToApplyConditionalStyles/MainWindow.xaml))
 * [MainWindow.xaml.cs](./CS/HowToApplyConditionalStyles/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/HowToApplyConditionalStyles/MainWindow.xaml.vb))
 <!-- default file list end -->
 # How to: Apply Conditional Formatting to Data Cells
