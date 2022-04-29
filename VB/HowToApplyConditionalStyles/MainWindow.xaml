@@ -5,15 +5,28 @@
         xmlns:local="clr-namespace:HowToBindToMDB"
         Title="MainWindow" Height="350" Width="525"  Loaded="Window_Loaded">
     <Grid>
-        <dxpg:PivotGridControl HorizontalAlignment="Left" Name="pivotGridControl1" 
-		                       VerticalAlignment="Top">
+        <dxpg:PivotGridControl Name="pivotGridControl1" DataProcessingEngine="Optimized">
             <dxpg:PivotGridControl.Fields>
-                <dxpg:PivotGridField Name="fieldCountry" FieldName="Country" Area="RowArea" />
-                <dxpg:PivotGridField Name="fieldSalesPerson" FieldName="Sales Person" Area="RowArea" />
-                <dxpg:PivotGridField Name="fieldYear" FieldName="OrderDate" Area="ColumnArea" 
-				                     Caption="Year" GroupInterval="DateYear" />
-                <dxpg:PivotGridField Name="fieldExtendedPrice" FieldName="Extended Price" 
-				                     Area="DataArea" CellFormat="c0" />
+                <dxpg:PivotGridField Name="fieldCountry"  Area="RowArea">
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="Country"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
+                <dxpg:PivotGridField Name="fieldSalesPerson" Area="RowArea">
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="Sales Person"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
+                <dxpg:PivotGridField Name="fieldYear" Area="ColumnArea" Caption="Year" >
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="OrderDate" GroupInterval="DateYear"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
+                <dxpg:PivotGridField Name="fieldExtendedPrice" Area="DataArea">
+                    <dxpg:PivotGridField.DataBinding>
+                        <dxpg:DataSourceColumnBinding ColumnName="Extended Price"/>
+                    </dxpg:PivotGridField.DataBinding>
+                </dxpg:PivotGridField>
             </dxpg:PivotGridControl.Fields>
             <dxpg:PivotGridControl.FieldCellTemplate>
                 <DataTemplate>
