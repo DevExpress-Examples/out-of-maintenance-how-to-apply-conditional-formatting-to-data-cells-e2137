@@ -1,6 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OptionInfer>On</OptionInfer>
     <TargetFramework>net5.0-windows</TargetFramework>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>WinExe</OutputType>
@@ -12,11 +11,8 @@
     <UseWPF>true</UseWPF>
     <Platforms>x86;AnyCPU</Platforms>
     <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
-    <EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
+    <DefaultItemExcludes>obj*/**</DefaultItemExcludes>
   </PropertyGroup>
-  <ItemGroup>
-    <ApplicationDefinition Include="App.xaml" />
-  </ItemGroup>
   <ItemGroup>
     <None Update="NwindDataSet.xsc">
       <DependentUpon>NwindDataSet.xsd</DependentUpon>
@@ -29,7 +25,7 @@
     <None Update="NwindDataSet.xss">
       <DependentUpon>NwindDataSet.xsd</DependentUpon>
     </None>
-    <AppDesigner Include="Properties\" />
+    <AppDesigner Include="My Project\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="nwind.mdb">
